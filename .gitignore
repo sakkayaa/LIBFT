@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# macOS and editor temporary files
+.DS_Store
+*.swp
+*.swo
