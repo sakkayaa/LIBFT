@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-bonus: $(B_OBJ)
+bonus: $(NAME) $(B_OBJ)
 	ar -rcs $(NAME) $(B_OBJ)
 
 clean:

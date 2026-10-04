@@ -1,11 +1,11 @@
 # libft
 
-> **C ile temel kütüphane fonksiyonlarını yeniden yazma projesi**  
+> **C ile temel kütüphane ve bağlı liste fonksiyonlarını yeniden yazma projesi**  
 > Standart C fonksiyonlarının davranışını anlamak, bellek yönetimini uygulamak ve yeniden kullanılabilir bir statik kütüphane oluşturmak için hazırlanmıştır.
 
 ## Proje hakkında
 
-`libft`, C dilinde sık kullanılan karakter kontrolü, string, bellek ve dosya tanımlayıcısına yazdırma fonksiyonlarının yeniden uygulamalarını içeren bir kütüphanedir. Proje; pointer kullanımı, buffer yönetimi, sınır durumları ve fonksiyon davranışlarını dikkatle ele alma pratiği sunar.
+`libft`, C dilinde sık kullanılan karakter kontrolü, string, bellek, bağlı liste ve dosya tanımlayıcısına yazdırma fonksiyonlarının yeniden uygulamalarını içeren bir kütüphanedir. Proje; pointer kullanımı, buffer yönetimi, dinamik bellek, bağlı listeler ve sınır durumlarını ele alma pratiği sunar.
 
 Derleme sonunda `libft.a` statik kütüphanesi oluşturulur. Böylece fonksiyonlar başka C projelerinde tekrar kullanılabilir.
 
@@ -15,6 +15,7 @@ Derleme sonunda `libft.a` statik kütüphanesi oluşturulur. Böylece fonksiyonl
 - **String işlemleri:** uzunluk, kopyalama, birleştirme, arama ve karşılaştırma
 - **Bellek işlemleri:** doldurma, kopyalama, taşıma, arama ve sıfırlama
 - **Dönüşüm ve ayırma:** `atoi`, `calloc`, `strdup`
+- **Bağlı listeler:** tek yönlü liste oluşturma, gezinme, ekleme, silme ve dönüştürme
 - **Dosya tanımlayıcısına çıktı:** karakter, string, satır ve sayı yazdırma
 - **Statik kütüphane:** Makefile ile `libft.a` üretimi
 
@@ -28,6 +29,7 @@ Derleme sonunda `libft.a` statik kütüphanesi oluşturulur. Böylece fonksiyonl
 | Bellek işlemleri | `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc` |
 | Sayı dönüştürme | `ft_atoi` |
 | Dosya tanımlayıcısına yazdırma | `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` |
+| Tek yönlü bağlı listeler | `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap` |
 
 Fonksiyon bildirimleri `libft.h` başlık dosyasında yer alır.
 
@@ -79,6 +81,7 @@ cc -Wall -Wextra -Werror -I/path/to/libft \
 | Komut | Açıklama |
 |---|---|
 | `make` | `libft.a` kütüphanesini oluşturur |
+| `make bonus` | Önce `make` çalıştırıldıktan sonra bağlı liste fonksiyonlarını kütüphaneye ekler |
 | `make clean` | Nesne dosyalarını siler |
 | `make fclean` | Nesne dosyalarıyla birlikte `libft.a` dosyasını siler |
 | `make re` | Temiz derleme yapar |

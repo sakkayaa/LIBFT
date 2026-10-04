@@ -48,6 +48,5 @@ int main()
 }
 */
 
-if durumunda -> ust uste binme olmadigi zaman normal yazilir. Bir sıkıntı olmaz.
-
-else durumunda -> ust uste binme gibi bir durum soz konusu degildir.
+/* if durumunda ust uste binme olmadigi zaman normal yazilir.
+** else durumunda ust uste binme soz konusu degildir. */
